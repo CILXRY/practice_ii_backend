@@ -8,7 +8,7 @@ from sqlalchemy import func
 app = FastAPI(title="答题系统 API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:4321", "http://127.0.0.1:4321"],  # Astro 默认端口
+    allow_origins=["http://localhost:4321","http://8.159.156.167:3344"],  # Astro 默认端口
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -56,6 +56,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=8000,
+        port=8223,
         reload=False,      # ❌ 关闭自动重载
     )
