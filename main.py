@@ -8,7 +8,7 @@ from sqlalchemy import func
 app = FastAPI(title="答题系统 API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:4321","http://8.159.156.167:80"],  # Astro 默认端口
+    allow_origins=["http://localhost:4321","http://localhost:80","http://localhost:3344","http://8.159.156.167:80","http://8.159.156.167:3344"],  # Astro 默认端口
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
